@@ -12,6 +12,11 @@
 		CF6607F52550A4C10033019C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6607F42550A4C10033019C /* Assets.xcassets */; };
 		CF6607F82550A4C10033019C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6607F62550A4C10033019C /* LaunchScreen.storyboard */; };
 		CF6608042550A6C50033019C /* FeedModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6608022550A6C50033019C /* FeedModel.xcdatamodeld */; };
+		CF6608232550A9ED0033019C /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608222550A9ED0033019C /* ThemeManager.swift */; };
+		CF6608262550AA0B0033019C /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608252550AA0B0033019C /* Extension+UIView.swift */; };
+		CF6608292550AA350033019C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608282550AA350033019C /* UserDataManager.swift */; };
+		CF66082C2550AA5F0033019C /* ReaderBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */; };
+		CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66082E2550AA9C0033019C /* Extension+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		CF6607F72550A4C10033019C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6607F92550A4C10033019C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6608032550A6C50033019C /* FeedModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedModel.xcdatamodel; sourceTree = "<group>"; };
+		CF6608222550A9ED0033019C /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CF6608252550AA0B0033019C /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		CF6608282550AA350033019C /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBaseVC.swift; sourceTree = "<group>"; };
+		CF66082E2550AA9C0033019C /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		CF6608082550A75E0033019C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -93,6 +104,8 @@
 		CF6608092550A7690033019C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF6608252550AA0B0033019C /* Extension+UIView.swift */,
+				CF66082E2550AA9C0033019C /* Extension+UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -100,6 +113,8 @@
 		CF66081C2550A78E0033019C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CF6608222550A9ED0033019C /* ThemeManager.swift */,
+				CF6608282550AA350033019C /* UserDataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,7 +214,12 @@
 			files = (
 				CF6607EC2550A4BE0033019C /* AppDelegate.swift in Sources */,
 				CF6607EE2550A4BE0033019C /* SceneDelegate.swift in Sources */,
+				CF6608292550AA350033019C /* UserDataManager.swift in Sources */,
+				CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */,
+				CF6608262550AA0B0033019C /* Extension+UIView.swift in Sources */,
 				CF6608042550A6C50033019C /* FeedModel.xcdatamodeld in Sources */,
+				CF66082C2550AA5F0033019C /* ReaderBaseVC.swift in Sources */,
+				CF6608232550A9ED0033019C /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
