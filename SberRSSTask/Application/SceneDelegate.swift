@@ -11,18 +11,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        
-        let vc = UIViewController()
-        vc.view.backgroundColor = .green
-        
+            
+        let vc = ReaderBaseVC()
         window.rootViewController = vc
+        setupNavigationBar()
         
         self.window = window
         window.makeKeyAndVisible()
+    }
+    
+    private func setupNavigationBar() {
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 20), NSAttributedString.Key.foregroundColor: ThemeManager.Color.sberColor]
+        UINavigationBar.appearance().titleTextAttributes = attributes as [NSAttributedString.Key : Any]
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

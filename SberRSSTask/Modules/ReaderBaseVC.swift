@@ -13,6 +13,7 @@ class ReaderBaseVC: UITabBarController {
     
     private var currentTabBarIndex: Int = 0
     
+    let newsVC = NewsVC()
     
     override func loadView() {
         super.loadView()
@@ -31,8 +32,12 @@ class ReaderBaseVC: UITabBarController {
     /// Настраиваем все страницы Tab Bar на необходимые контроллеры представления
     private func configureViewController() {
         
-        // TODO - Вставить новые VC
+        guard let rssImage = UIImage(named: "rss") else { return }
         
+        // TODO - Вставить новые VC
+        let news = constructNavController(unselectedImage: rssImage, rootViewController: newsVC, containerColor: #colorLiteral(red: 0.1700487137, green: 0.1845474541, blue: 0.1973886788, alpha: 1), navTitle: "Главная", tabBarTag: 0)
+        
+        viewControllers = [news]
         setupTabBar()
     }
     

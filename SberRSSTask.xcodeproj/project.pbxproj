@@ -21,6 +21,14 @@
 		CF6608352551427E0033019C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608342551427E0033019C /* NetworkService.swift */; };
 		CF6608382551428A0033019C /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608372551428A0033019C /* NetworkDataFetcher.swift */; };
 		CF66083B255142A10033019C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66083A255142A10033019C /* CoreDataManager.swift */; };
+		CF660843255144950033019C /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660842255144950033019C /* FeedViewModel.swift */; };
+		CF660847255144BE0033019C /* NewsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660846255144BE0033019C /* NewsTableViewCellViewModel.swift */; };
+		CF66084A255144D70033019C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660849255144D70033019C /* Extension+String.swift */; };
+		CF66084D255144FA0033019C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66084C255144FA0033019C /* NewsTableViewCell.swift */; };
+		CF660850255145140033019C /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66084F255145140033019C /* NewsVC.swift */; };
+		CF660855255145500033019C /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660854255145500033019C /* Source.swift */; };
+		CF66085A255145870033019C /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660859255145870033019C /* Extension+Date.swift */; };
+		CF66085E255145B00033019C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66085D255145B00033019C /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,14 @@
 		CF6608342551427E0033019C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CF6608372551428A0033019C /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		CF66083A255142A10033019C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CF660842255144950033019C /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		CF660846255144BE0033019C /* NewsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		CF660849255144D70033019C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		CF66084C255144FA0033019C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		CF66084F255145140033019C /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		CF660854255145500033019C /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		CF660859255145870033019C /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		CF66085D255145B00033019C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +94,8 @@
 				CF6608082550A75E0033019C /* Modules */,
 				CF66081C2550A78E0033019C /* Helpers */,
 				CF6608092550A7690033019C /* Extension */,
-				CF66081D2550A7990033019C /* Resources */,
 				CF66081E2550A7A20033019C /* Storyboards */,
+				CF66081D2550A7990033019C /* Resources */,
 				CF6607F92550A4C10033019C /* Info.plist */,
 			);
 			path = SberRSSTask;
@@ -107,6 +123,8 @@
 		CF6608082550A75E0033019C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF6608522551453D0033019C /* Sources */,
+				CF66083D2551443D0033019C /* News */,
 				CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */,
 			);
 			path = Modules;
@@ -117,6 +135,8 @@
 			children = (
 				CF6608252550AA0B0033019C /* Extension+UIView.swift */,
 				CF66082E2550AA9C0033019C /* Extension+UIImage.swift */,
+				CF660849255144D70033019C /* Extension+String.swift */,
+				CF660859255145870033019C /* Extension+Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -126,6 +146,7 @@
 			children = (
 				CF6608222550A9ED0033019C /* ThemeManager.swift */,
 				CF6608282550AA350033019C /* UserDataManager.swift */,
+				CF66085D255145B00033019C /* Reachability.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -153,6 +174,57 @@
 				CF66083A255142A10033019C /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CF66083D2551443D0033019C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CF66083F2551446F0033019C /* ViewModel */,
+				CF660840255144770033019C /* Cells */,
+				CF6608412551447C0033019C /* Controller */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CF66083F2551446F0033019C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF660842255144950033019C /* FeedViewModel.swift */,
+				CF660846255144BE0033019C /* NewsTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF660840255144770033019C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF66084C255144FA0033019C /* NewsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CF6608412551447C0033019C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF66084F255145140033019C /* NewsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF6608522551453D0033019C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CF660853255145480033019C /* Model */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CF660853255145480033019C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF660854255145500033019C /* Source.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,17 +297,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6608352551427E0033019C /* NetworkService.swift in Sources */,
+				CF66085A255145870033019C /* Extension+Date.swift in Sources */,
 				CF6607EC2550A4BE0033019C /* AppDelegate.swift in Sources */,
+				CF66084D255144FA0033019C /* NewsTableViewCell.swift in Sources */,
 				CF660832255142720033019C /* RSSParser.swift in Sources */,
 				CF6608382551428A0033019C /* NetworkDataFetcher.swift in Sources */,
+				CF660847255144BE0033019C /* NewsTableViewCellViewModel.swift in Sources */,
+				CF660850255145140033019C /* NewsVC.swift in Sources */,
+				CF66084A255144D70033019C /* Extension+String.swift in Sources */,
 				CF6607EE2550A4BE0033019C /* SceneDelegate.swift in Sources */,
 				CF6608292550AA350033019C /* UserDataManager.swift in Sources */,
 				CF66083B255142A10033019C /* CoreDataManager.swift in Sources */,
 				CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */,
 				CF6608262550AA0B0033019C /* Extension+UIView.swift in Sources */,
 				CF6608042550A6C50033019C /* FeedModel.xcdatamodeld in Sources */,
+				CF660855255145500033019C /* Source.swift in Sources */,
 				CF66082C2550AA5F0033019C /* ReaderBaseVC.swift in Sources */,
 				CF6608232550A9ED0033019C /* ThemeManager.swift in Sources */,
+				CF66085E255145B00033019C /* Reachability.swift in Sources */,
+				CF660843255144950033019C /* FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
