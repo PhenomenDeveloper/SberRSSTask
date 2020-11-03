@@ -55,10 +55,12 @@ class NewsVC: UIViewController {
             print("Internet Connection Available!")
             guard let url = viewModel?.currentSource.url else { return }
             refreshControl.beginRefreshing()
+            view.isUserInteractionEnabled = false
             rssParser.updateNews(currentSource: url) {[weak self] (objects) in
                 self?.viewModel?.news = objects
                 self?.tableView.reloadData()
             }
+            view.isUserInteractionEnabled = true
             refreshControl.endRefreshing()
         } else {
             print("Internet Connection not Available!")
