@@ -45,7 +45,6 @@ class ReaderBaseVC: UITabBarController {
         let source = constructNavController(unselectedImage: sourceImage, rootViewController: sourceVC, containerColor: #colorLiteral(red: 0.1700487137, green: 0.1845474541, blue: 0.1973886788, alpha: 1), navTitle: "Источники", tabBarTag: 1)
         
         viewControllers = [news, source]
-//        setupTabBar()
     }
     
     /// Установка TabBar
