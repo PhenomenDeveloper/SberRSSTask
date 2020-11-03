@@ -11,13 +11,13 @@ struct UserDataManager {
     static let (sourceTitleKey, sourceURLKey) = ("sourceTitle", "sourceURL")
     static let userSessionKey = "FeedNews"
     private static let userDefault = UserDefaults.standard
-
+    
     struct UserDetails {
         let savedSourcesTitle: [String]
         let savedSourcesURL: [String]
-
+        
         init(_ json: [String: [String]]) {
-                        
+            
             self.savedSourcesTitle = json[sourceTitleKey] ?? ["Банки.ру", "Финам.RU"]
             
             self.savedSourcesURL = json[sourceURLKey] ?? ["https://www.banki.ru/xml/news.rss", "https://www.finam.ru/net/analysis/conews/rsspoint"]
@@ -30,7 +30,6 @@ struct UserDataManager {
     static func getSourcesTitle() -> [String] {
         
         let value = UserDetails((userDefault.value(forKey: userSessionKey) as? [String: [String]]) ?? [:])
-        
         return value.savedSourcesTitle
     }
 

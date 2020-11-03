@@ -31,6 +31,11 @@
 		CF66085E255145B00033019C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66085D255145B00033019C /* Reachability.swift */; };
 		CF66086B255174230033019C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66086A255174230033019C /* DetailView.swift */; };
 		CF66086F255174420033019C /* DetailNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66086E255174420033019C /* DetailNewsVC.swift */; };
+		CF66087F25518A610033019C /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66087E25518A610033019C /* SourceTableViewCell.swift */; };
+		CF66088325518A850033019C /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66088225518A850033019C /* SourceViewModel.swift */; };
+		CF66088625518AAB0033019C /* SourceTableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66088525518AAB0033019C /* SourceTableViewCellViewModelType.swift */; };
+		CF66088925518AFD0033019C /* SourceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66088825518AFD0033019C /* SourceListVC.swift */; };
+		CF66088C25518B1F0033019C /* Extension+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66088B25518B1F0033019C /* Extension+UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		CF66085D255145B00033019C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		CF66086A255174230033019C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CF66086E255174420033019C /* DetailNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsVC.swift; sourceTree = "<group>"; };
+		CF66087E25518A610033019C /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
+		CF66088225518A850033019C /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
+		CF66088525518AAB0033019C /* SourceTableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		CF66088825518AFD0033019C /* SourceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListVC.swift; sourceTree = "<group>"; };
+		CF66088B25518B1F0033019C /* Extension+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIAlertController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +152,7 @@
 				CF66082E2550AA9C0033019C /* Extension+UIImage.swift */,
 				CF660849255144D70033019C /* Extension+String.swift */,
 				CF660859255145870033019C /* Extension+Date.swift */,
+				CF66088B25518B1F0033019C /* Extension+UIAlertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -220,6 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				CF660853255145480033019C /* Model */,
+				CF66087B25518A2D0033019C /* ViewModel */,
+				CF66087C25518A3C0033019C /* Controller */,
+				CF66087D25518A420033019C /* Cells */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -255,6 +269,31 @@
 				CF66086E255174420033019C /* DetailNewsVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF66087B25518A2D0033019C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF66088225518A850033019C /* SourceViewModel.swift */,
+				CF66088525518AAB0033019C /* SourceTableViewCellViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF66087C25518A3C0033019C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF66088825518AFD0033019C /* SourceListVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF66087D25518A420033019C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF66087E25518A610033019C /* SourceTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +377,17 @@
 				CF66084A255144D70033019C /* Extension+String.swift in Sources */,
 				CF6607EE2550A4BE0033019C /* SceneDelegate.swift in Sources */,
 				CF66086B255174230033019C /* DetailView.swift in Sources */,
+				CF66088C25518B1F0033019C /* Extension+UIAlertController.swift in Sources */,
 				CF6608292550AA350033019C /* UserDataManager.swift in Sources */,
+				CF66088325518A850033019C /* SourceViewModel.swift in Sources */,
 				CF66083B255142A10033019C /* CoreDataManager.swift in Sources */,
 				CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */,
 				CF6608262550AA0B0033019C /* Extension+UIView.swift in Sources */,
 				CF6608042550A6C50033019C /* FeedModel.xcdatamodeld in Sources */,
+				CF66087F25518A610033019C /* SourceTableViewCell.swift in Sources */,
 				CF660855255145500033019C /* Source.swift in Sources */,
+				CF66088625518AAB0033019C /* SourceTableViewCellViewModelType.swift in Sources */,
+				CF66088925518AFD0033019C /* SourceListVC.swift in Sources */,
 				CF66082C2550AA5F0033019C /* ReaderBaseVC.swift in Sources */,
 				CF6608232550A9ED0033019C /* ThemeManager.swift in Sources */,
 				CF66085E255145B00033019C /* Reachability.swift in Sources */,
