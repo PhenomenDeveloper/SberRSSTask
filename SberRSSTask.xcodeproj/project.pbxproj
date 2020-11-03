@@ -17,6 +17,10 @@
 		CF6608292550AA350033019C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608282550AA350033019C /* UserDataManager.swift */; };
 		CF66082C2550AA5F0033019C /* ReaderBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */; };
 		CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66082E2550AA9C0033019C /* Extension+UIImage.swift */; };
+		CF660832255142720033019C /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660831255142720033019C /* RSSParser.swift */; };
+		CF6608352551427E0033019C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608342551427E0033019C /* NetworkService.swift */; };
+		CF6608382551428A0033019C /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6608372551428A0033019C /* NetworkDataFetcher.swift */; };
+		CF66083B255142A10033019C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66083A255142A10033019C /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		CF6608282550AA350033019C /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBaseVC.swift; sourceTree = "<group>"; };
 		CF66082E2550AA9C0033019C /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		CF660831255142720033019C /* RSSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		CF6608342551427E0033019C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CF6608372551428A0033019C /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		CF66083A255142A10033019C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,9 @@
 		CF6608072550A7540033019C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CF660831255142720033019C /* RSSParser.swift */,
+				CF6608342551427E0033019C /* NetworkService.swift */,
+				CF6608372551428A0033019C /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6608022550A6C50033019C /* FeedModel.xcdatamodeld */,
+				CF66083A255142A10033019C /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -212,9 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6608352551427E0033019C /* NetworkService.swift in Sources */,
 				CF6607EC2550A4BE0033019C /* AppDelegate.swift in Sources */,
+				CF660832255142720033019C /* RSSParser.swift in Sources */,
+				CF6608382551428A0033019C /* NetworkDataFetcher.swift in Sources */,
 				CF6607EE2550A4BE0033019C /* SceneDelegate.swift in Sources */,
 				CF6608292550AA350033019C /* UserDataManager.swift in Sources */,
+				CF66083B255142A10033019C /* CoreDataManager.swift in Sources */,
 				CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */,
 				CF6608262550AA0B0033019C /* Extension+UIView.swift in Sources */,
 				CF6608042550A6C50033019C /* FeedModel.xcdatamodeld in Sources */,
