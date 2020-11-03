@@ -10,12 +10,12 @@ import UIKit
 class ReaderBaseVC: UITabBarController {
     
     // MARK: - Свойства
-    
     private var currentTabBarIndex: Int = 0
     
     let newsVC = NewsVC()
     let sourceVC = SourceListVC()
     
+    // MARK: - Функции
     override func loadView() {
         super.loadView()
     }
@@ -27,7 +27,10 @@ class ReaderBaseVC: UITabBarController {
         sourceVC.delegate = newsVC
         
         configureViewController()
-        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupTabBar()
     }
     
     // MARK: - Расстановка UI элементов
@@ -42,15 +45,21 @@ class ReaderBaseVC: UITabBarController {
         let source = constructNavController(unselectedImage: sourceImage, rootViewController: sourceVC, containerColor: #colorLiteral(red: 0.1700487137, green: 0.1845474541, blue: 0.1973886788, alpha: 1), navTitle: "Источники", tabBarTag: 1)
         
         viewControllers = [news, source]
-        setupTabBar()
+//        setupTabBar()
     }
     
     /// Установка TabBar
     private func setupTabBar() {
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         guard let tabItems = tabBar.items else { return }
         
         let numberOfItems = CGFloat(tabItems.count)
-        let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems + 10, height: tabBar.frame.height + 34)
+        var safeAreaInset: CGFloat = 0.0
+        
+        if window?.safeAreaInsets.bottom != nil {
+            safeAreaInset = 6
+        }
+        let tabBarItemSize = CGSize(width: tabBar.frame.width / numberOfItems + 10, height: tabBar.frame.height + 10 + safeAreaInset)
         
         tabBar.selectionIndicatorImage = UIImage.imageWithColor(color: ThemeManager.Color.sberColor, size: tabBarItemSize)
         

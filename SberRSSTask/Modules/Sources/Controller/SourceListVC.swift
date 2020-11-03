@@ -12,6 +12,7 @@ protocol SourceListDataDelegate: class {
 
 class SourceListVC: UIViewController {
     
+    // MARK: - Свойства
     private var viewModel: SourceViewModelType?
     weak var delegate: SourceListDataDelegate?
     
@@ -78,6 +79,7 @@ class SourceListVC: UIViewController {
         return alert
     }()
     
+    // MARK: - Функции
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -138,7 +140,7 @@ class SourceListVC: UIViewController {
     }
 }
 
-
+//MARK:- UITableViewDataSource
 extension SourceListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         emptySourceLabel.isHidden = viewModel?.numberOfRows() != 0

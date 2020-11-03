@@ -8,10 +8,11 @@
 import UIKit
 import CoreData
 
-class NewsVC: UIViewController, SourceListDataDelegate {
+class NewsVC: UIViewController {
     
+    // MARK: - Свойства
     private let rssParser: RSSParser = RSSParser()
-    var viewModel: MainVCViewModelType?
+    private var viewModel: MainVCViewModelType?
     
     private let tableView = UITableView(frame: .zero, style: .plain)
     private var refreshControl = UIRefreshControl()
@@ -33,7 +34,7 @@ class NewsVC: UIViewController, SourceListDataDelegate {
         return imageView
     }()
     
-    
+    // MARK: - Функции
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,11 +44,6 @@ class NewsVC: UIViewController, SourceListDataDelegate {
         
         setupTableView()
         
-        updateNews()
-    }
-    
-    func updateSource(source: Source) {
-        viewModel?.currentSource = source
         updateNews()
     }
     
@@ -123,7 +119,7 @@ class NewsVC: UIViewController, SourceListDataDelegate {
         emptyNewsImage.topAnchor.constraint(equalTo: emptyNewsLabel.bottomAnchor, constant: 25).isActive = true
     }
 }
-
+//MARK:- UITableViewDataSource
 extension NewsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         emptyNewsLabel.isHidden = viewModel?.numberOfRows() != 0
@@ -142,6 +138,7 @@ extension NewsVC: UITableViewDataSource {
     }
 }
 
+//MARK:- UITableViewDelegate
 extension NewsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailNewsVC()
@@ -149,6 +146,14 @@ extension NewsVC: UITableViewDelegate {
         tableView.reloadData()
         detailVC.rssItem = viewModel?.news[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
+//MARK:- SourceListDataDelegate
+extension NewsVC: SourceListDataDelegate {
+    func updateSource(source: Source) {
+        viewModel?.currentSource = source
+        updateNews()
     }
 }
 

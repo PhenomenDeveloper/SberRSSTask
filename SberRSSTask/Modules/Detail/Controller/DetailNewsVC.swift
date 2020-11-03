@@ -10,9 +10,11 @@ import CoreData
 
 class DetailNewsVC: UIViewController {
     
+    // MARK: - Свойства
     private let detailView = DetailView()
-    var rssItem: Feed? = nil
+    var rssItem: Feed?
     
+    // MARK: - Функции
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,9 +27,16 @@ class DetailNewsVC: UIViewController {
         view.backgroundColor = ThemeManager.Color.backgroundColor
         
         view.addSubview(detailView)
-        let navBarHeight = UIApplication.shared.statusBarFrame.size.height +
-                 (navigationController?.navigationBar.frame.height ?? 0.0)
         
+        var statusBarHeight: CGFloat = 0
+        if #available(iOS 13.0, *) {
+            let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+            statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        } else {
+            statusBarHeight = UIApplication.shared.statusBarFrame.height
+        }
+        
+        let navBarHeight = statusBarHeight + (navigationController?.navigationBar.frame.height ?? 0)
         
         detailView.setPosition(top: view.topAnchor,
                                left: view.leftAnchor,

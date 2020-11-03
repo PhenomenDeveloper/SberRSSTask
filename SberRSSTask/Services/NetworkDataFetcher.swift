@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol DataFetcherProtocol {
+protocol DataFetcher {
     func fetchNewsData(sourceURL: String, completion: @escaping (Data?) -> ())
 }
 
-class NetworkDataFetcher {
+class NetworkDataFetcher: DataFetcher {
     
     let networking: Networking
 

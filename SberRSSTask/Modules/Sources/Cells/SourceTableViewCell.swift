@@ -72,12 +72,16 @@ class SourceTableViewCell: UITableViewCell {
 
         cardView.setPosition(top: topAnchor,
                              left: leftAnchor,
-                             bottom: bottomAnchor,
+                             bottom: nil,
                              right: rightAnchor,
                              paddingTop: 12,
                              paddingLeft: 16,
                              paddingBottom: 12,
                              paddingRight: 12)
+        
+        let bottomConstraint = cardView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        bottomConstraint.priority = UILayoutPriority(999)
+        bottomConstraint.isActive = true
     }
     
     ///Наложение второго слоя UI
@@ -98,11 +102,11 @@ class SourceTableViewCell: UITableViewCell {
         urlLabel.setPosition(top: titleLabel.bottomAnchor,
                               left: titleLabel.leftAnchor,
                               bottom: cardView.bottomAnchor,
-                              right: nil,
+                              right: cardView.rightAnchor,
                               paddingTop: 4,
                               paddingLeft: 0,
                               paddingBottom: 12,
-                              paddingRight: 0)
+                              paddingRight: 10)
     }
 
 }

@@ -15,7 +15,6 @@ class DetailView: UIView {
         return view
     }()
     
-    // TO DO: скруглить под cardView
     private let lineView: UIView = {
         let view = UIView()
         view.backgroundColor = ThemeManager.Color.sberColor

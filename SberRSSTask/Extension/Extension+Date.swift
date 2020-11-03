@@ -8,6 +8,7 @@
 import Foundation
 
 extension DateFormatter {
+    // Форматы даты из XML и для отображения
     static let dateFormatFromXML: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "E, d MMM yyyy HH:mm:ss Z"
