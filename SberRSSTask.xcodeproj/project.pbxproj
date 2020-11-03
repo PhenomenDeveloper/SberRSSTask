@@ -29,6 +29,8 @@
 		CF660855255145500033019C /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660854255145500033019C /* Source.swift */; };
 		CF66085A255145870033019C /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF660859255145870033019C /* Extension+Date.swift */; };
 		CF66085E255145B00033019C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66085D255145B00033019C /* Reachability.swift */; };
+		CF66086B255174230033019C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66086A255174230033019C /* DetailView.swift */; };
+		CF66086F255174420033019C /* DetailNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66086E255174420033019C /* DetailNewsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		CF660854255145500033019C /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		CF660859255145870033019C /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		CF66085D255145B00033019C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CF66086A255174230033019C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CF66086E255174420033019C /* DetailNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		CF6608082550A75E0033019C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF660867255173EA0033019C /* Detail */,
 				CF6608522551453D0033019C /* Sources */,
 				CF66083D2551443D0033019C /* News */,
 				CF66082B2550AA5F0033019C /* ReaderBaseVC.swift */,
@@ -227,6 +232,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CF660867255173EA0033019C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CF660868255174100033019C /* View */,
+				CF660869255174150033019C /* Controller */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CF660868255174100033019C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF66086A255174230033019C /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF660869255174150033019C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF66086E255174420033019C /* DetailNewsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,6 +328,7 @@
 			files = (
 				CF6608352551427E0033019C /* NetworkService.swift in Sources */,
 				CF66085A255145870033019C /* Extension+Date.swift in Sources */,
+				CF66086F255174420033019C /* DetailNewsVC.swift in Sources */,
 				CF6607EC2550A4BE0033019C /* AppDelegate.swift in Sources */,
 				CF66084D255144FA0033019C /* NewsTableViewCell.swift in Sources */,
 				CF660832255142720033019C /* RSSParser.swift in Sources */,
@@ -306,6 +337,7 @@
 				CF660850255145140033019C /* NewsVC.swift in Sources */,
 				CF66084A255144D70033019C /* Extension+String.swift in Sources */,
 				CF6607EE2550A4BE0033019C /* SceneDelegate.swift in Sources */,
+				CF66086B255174230033019C /* DetailView.swift in Sources */,
 				CF6608292550AA350033019C /* UserDataManager.swift in Sources */,
 				CF66083B255142A10033019C /* CoreDataManager.swift in Sources */,
 				CF66082F2550AA9C0033019C /* Extension+UIImage.swift in Sources */,
