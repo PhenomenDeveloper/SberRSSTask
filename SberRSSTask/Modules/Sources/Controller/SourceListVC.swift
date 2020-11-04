@@ -67,6 +67,7 @@ class SourceListVC: UIViewController {
             self.viewModel?.sources.append(newSource)
             self.tableView.reloadData()
             self.delegate?.updateSource(source: newSource)
+            self.viewModel?.saveSourcesInUserDefaults()
            
             titleTextField.text = ""
             urlTextField.text = ""
@@ -99,11 +100,6 @@ class SourceListVC: UIViewController {
         let logoutBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addSourceClicked(btn:)))
         self.navigationItem.rightBarButtonItem  = logoutBarButtonItem
         self.navigationItem.rightBarButtonItem?.tintColor = ThemeManager.Color.sberColor
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        viewModel?.saveSourcesInUserDefaults()
     }
     
     @objc func addSourceClicked(btn: UIBarButtonItem){

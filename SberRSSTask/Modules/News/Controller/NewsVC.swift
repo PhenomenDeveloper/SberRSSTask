@@ -59,6 +59,7 @@ class NewsVC: UIViewController {
             rssParser.updateNews(currentSource: url) {[weak self] (objects) in
                 self?.viewModel?.news = objects
                 self?.tableView.reloadData()
+                CoreDataManager.shared.saveNews(news: objects)
             }
             view.isUserInteractionEnabled = true
             refreshControl.endRefreshing()
@@ -143,10 +144,12 @@ extension NewsVC: UITableViewDataSource {
 //MARK:- UITableViewDelegate
 extension NewsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
         let detailVC = DetailNewsVC()
-        viewModel?.news[indexPath.row].isReading = true
+        viewModel.news[indexPath.row].isReading = true
         tableView.reloadData()
-        detailVC.rssItem = viewModel?.news[indexPath.row]
+        CoreDataManager.shared.saveNews(news: viewModel.news)
+        detailVC.rssItem = viewModel.news[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
